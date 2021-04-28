@@ -3,11 +3,10 @@ import * as codepipeline from '@aws-cdk/aws-codepipeline';
 import * as codepipeline_actions from '@aws-cdk/aws-codepipeline-actions';
 import * as lambda from '@aws-cdk/aws-lambda';
 import { App, Stack, StackProps, SecretValue } from '@aws-cdk/core';
+import { connectionArn } from '../aws-config';
 
 export interface LandingPagePipelineStackProps extends StackProps {
   readonly lambdaCode: lambda.CfnParametersCode;
-  readonly githubToken: string;
-  // readonly repoName: string
 }
 
 export class LandingPagePipelineStack extends Stack {
@@ -77,13 +76,13 @@ export class LandingPagePipelineStack extends Stack {
         {
           stageName: 'Source',
           actions: [
-            new codepipeline_actions.GitHubSourceAction({
+            new codepipeline_actions.CodeStarConnectionsSourceAction({
               actionName: 'Checkout',
               output: sourceOutput,
               owner: 'getfitr',
               repo: 'landing-page-pipeline',
-              oauthToken: SecretValue.plainText(props.githubToken),
-              trigger: codepipeline_actions.GitHubTrigger.WEBHOOK,
+              branch: 'main',
+              connectionArn: connectionArn,
             }),
           ],
         },

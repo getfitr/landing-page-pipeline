@@ -4,13 +4,16 @@ This is a blank project for TypeScript development with CDK.
 
 The `cdk.json` file tells the CDK Toolkit how to execute your app.
 
-## Commands to install `cdk`
+## Dependencies / Requirements
 
-```bash
-cdk init --language typescript
-npm install @aws-cdk/aws-codedeploy @aws-cdk/aws-lambda @aws-cdk/aws-codebuild @aws-cdk/aws-codepipeline
-npm install @aws-cdk/aws-codecommit
-npm install @aws-cdk/aws-codepipeline-actions
+The stack needs an existing GitHub connection. The documentation explains [how to create the connection in the CodePipeline settings](https://docs.aws.amazon.com/codepipeline/latest/userguide/connections-github.html).
+
+The stack is expecting an AWS Resource Name (ARN) for the GitHub Connection you have created. It is expecting a `aws-config.js` which has a `connectionArn` parameter. Provide your GitHub Connection ARN in this file.
+
+Here is an example:
+
+```js
+export const connectionArn = "arn:aws:codestar-connections:eu-west-1:691062780315:connection/5a5860b1-a9a0-4e2b-8c10-34b65c5f712c";
 ```
 
 ## Useful commands
