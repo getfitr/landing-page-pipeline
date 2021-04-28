@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/getfitr/landing-page-pipeline/compare/v0.1.3...v0.1.4) (2021-04-28)
+
+
+### Bug Fixes
+
+* push connectionArn to repo ([f1722f1](https://github.com/getfitr/landing-page-pipeline/commit/f1722f16388178e6bc2c88b20e6d194e24fce398))
+
 ### [0.1.3](https://github.com/getfitr/landing-page-pipeline/compare/v0.1.2...v0.1.3) (2021-04-28)
 
 
