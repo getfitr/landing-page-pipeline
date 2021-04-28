@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/getfitr/landing-page-pipeline/compare/v0.1.4...v0.1.5) (2021-04-28)
+
+
+### Bug Fixes
+
+* adding script cdk ([25b3b3b](https://github.com/getfitr/landing-page-pipeline/commit/25b3b3bfc3048b1877e49c2817464f1dc11d5da0))
+
 ### [0.1.4](https://github.com/getfitr/landing-page-pipeline/compare/v0.1.3...v0.1.4) (2021-04-28)
 
 

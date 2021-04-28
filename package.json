@@ -1,6 +1,6 @@
 {
   "name": "landing-page-pipeline",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "bin": {
     "landing-page-pipeline": "bin/landing-page-pipeline.js"
   },
