@@ -9,10 +9,15 @@
     "watch": "tsc -w",
     "test": "jest",
     "cdk": "cdk",
-    "cdk:deploy": "cdk deploy LandingPagePipelineStack",
+    "cdk:deploy": "cdk deploy LandingPagePipeline",
     "deploy": "git push --follow-tags origin main && npm run cdk:deploy",
     "release": "standard-version && npm run deploy",
-    "major-release": "standard-version --release-as major && npm run deploy"
+    "major-release": "standard-version --release-as major && npm run deploy",
+    "app:install": "yarn --cwd ./app",
+    "app:start": "yarn --cwd ./app start",
+    "app:build": "yarn --cwd ./app build",
+    "app:test": "yarn --cwd ./app test",
+    "app:prebuild": "yarn --cwd ./app test:prebuild"
   },
   "devDependencies": {
     "@aws-cdk/assert": "1.98.0",
